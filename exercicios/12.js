@@ -20,8 +20,9 @@
  */
 
 const removerPropriedade = (objeto, propriedeParaRemover) => {
-  delete objeto[propriedeParaRemover]
-  return objeto
+  const newObject = {...objeto}
+  delete newObject[propriedeParaRemover]
+  return newObject
 }
 
 console.log(removerPropriedade({ a: 1, b: 2 }, "a"))

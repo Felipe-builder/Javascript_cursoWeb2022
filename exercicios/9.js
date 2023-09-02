@@ -15,5 +15,12 @@ const repetir = (valor, repeticoes) => {
   return produto
 }
 
+const repetir2 = (valor, repeticoes) => {
+  return Array(repeticoes).fill(valor)
+}
+
 console.log(repetir("código", 2))
 console.log(repetir(7, 3))
+
+console.log(repetir2("código", 2))
+console.log(repetir2(7, 3))

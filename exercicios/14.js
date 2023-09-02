@@ -16,11 +16,12 @@
  */
 
 const objetoParaArray = (objeto) => {
-  const newArray = [];
-  for (const [chave, valor] of Object.entries(objeto)) {
-    newArray.push([chave, valor]);
-  }
-  return newArray
+  return Object.entries(objeto) 
+}
+
+const objetoParaArray2 = (objeto) => {
+  const chaves = Object.keys(objeto)
+  return chaves.map(chave => [chave, objeto[chave]])
 }
 
 console.log(objetoParaArray({
@@ -31,3 +32,13 @@ console.log(objetoParaArray({
   codigo: 11111,
   preco: 12000
 }))
+
+console.log(objetoParaArray2({
+  nome: "Maria",
+  profissao: "Desenvolvedora de software"
+}))
+console.log(objetoParaArray2({
+  codigo: 11111,
+  preco: 12000
+}))
+

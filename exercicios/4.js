@@ -40,6 +40,30 @@ const nameOfMoth = (numberMonth) => {
   }
 }
 
+const receberNomeDoMes = (numero) => {
+  const mapeamento = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ]
+
+  return mapeamento[--numero]
+}
+
 console.log(nameOfMoth(2))
 console.log(nameOfMoth(1))
 console.log(nameOfMoth(4))
+
+
+console.log(receberNomeDoMes(2))
+console.log(receberNomeDoMes(1))
+console.log(receberNomeDoMes(4))

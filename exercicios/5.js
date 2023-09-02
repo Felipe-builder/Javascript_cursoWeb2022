@@ -8,7 +8,7 @@
  */
 
 const biggerOrEqual = (x, y) => {
-  return x >= y
+  return typeof x !== typeof y ? false : x >= y
 }
 
 console.log(biggerOrEqual(0, 0))

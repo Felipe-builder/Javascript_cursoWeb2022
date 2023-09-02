@@ -8,12 +8,18 @@
 
 const receberPrimeiroEUltimoElemento = (array) => {
   const newArray = [];
-  
   newArray.push(array.shift());
   newArray.push(array.pop());
-
   return newArray
 }
 
+const receberPrimeiroEUltimoElemento2= ([fistElment, ...array]) => {
+  return [fistElment, array.pop()]
+}
+
+
 console.log(receberPrimeiroEUltimoElemento([7,14,"olá"]))
 console.log(receberPrimeiroEUltimoElemento([-100, "aplicativo", 16]))
+
+console.log(receberPrimeiroEUltimoElemento2([7,14,"olá"]))
+console.log(receberPrimeiroEUltimoElemento2([-100, "aplicativo", 16]))
